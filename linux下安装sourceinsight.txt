@@ -1,0 +1,75 @@
+在Ubuntu中，安装Windows程序用wine，然后用wine安装Windows软件即可。
+
+安装wine
+
+在终端输入以下命令：
+
+sudo apt-get install wine
+
+用wine安装Source Insight
+
+在终端中输入以下命令：
+
+wine ～/SourceInsight/InsightSetup.exe
+
+注：SourceInsight的安装包要自行下载，跟windows下的安装一样。
+
+导入工程即可，跟windows无异。
+
+附图：
+
+Ubuntu下安装 Source insight
+
+如何打开SourceInsight？
+
+项目导入之后，把sourceInsight关闭之后，怎么再把SourceInsight打开？这时发现在终端不知道wine安装到哪了，还有SourceInsight的安装目录又在哪里？
+
+先在终端中输入命令
+
+cd ~
+
+ll
+
+发现多了个隐藏目录：
+
+.wine/
+
+进去看看：
+
+cd .wine/
+
+ll
+
+发现有以下目录：
+
+dosdevices  drive_c  system.reg  userdef.reg  user.reg
+
+其中drive_c默认为windows下C盘，打开进到该目录看看：
+
+cd drive_c
+
+ls
+
+Ubuntu下安装 Source insight
+
+这时基本上都能明白怎么回事了，打开Program Files：
+
+cd Program\ Files/
+
+ls
+
+Ubuntu下安装 Source insight
+
+总算找到它了，打开看看：
+
+=================
+
+cd Source\ Insight\ 3/
+
+ls
+
+在终端输入命令：
+
+wine Insight3.exe
+
+成功打开Source Insight！

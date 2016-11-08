@@ -1,0 +1,23 @@
+boost thread interruput
+	thread sleep and wait can but wake by interruput;
+	only interruput signal can wake up thread;
+	thread interruput can not interruput thread,running;
+	the interruput works on blocking thread,setting interruputing flag;
+	block method: sleep/join/wait/condition_wait/可中断的通道上的 I/O 操作方法;
+
+	
+java thread block and interruput:
+	http://www.cnblogs.com/linjiqin/archive/2011/04/11/2012695.html
+	http://blog.csdn.net/garybrother/article/details/4033447
+	
+	wait/notify
+	suspend/resume
+	sleep yield
+	
+	
+posix thread 
+	https://computing.llnl.gov/tutorials/pthreads/
+ 
+
+	
+	

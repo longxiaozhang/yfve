@@ -1,0 +1,67 @@
+bootp
+
+dhcp——rfc 2131
+
+      o "DHCP client"
+
+      A DHCP client is an Internet host using DHCP to obtain
+      configuration parameters such as a network address.
+
+      o "DHCP server"
+
+      A DHCP server is an Internet host that returns configuration
+      parameters to DHCP clients.
+
+      o "BOOTP relay agent"
+
+      A BOOTP relay agent or relay agent is an Internet host or router
+      that passes DHCP messages between DHCP clients and DHCP servers.
+      DHCP is designed to use the same relay agent behavior as specified
+      in the BOOTP protocol specification.
+
+      o "binding"
+
+      A binding is a collection of configuration parameters, including
+      at least an IP address, associated with or "bound to" a DHCP
+      client.  Bindings are managed by DHCP servers.
+	  
+ Message         Use
+   -------         ---
+
+   DHCPDISCOVER -  Client broadcast to locate available servers.
+
+   DHCPOFFER    -  Server to client in response to DHCPDISCOVER with
+                   offer of configuration parameters.
+
+   DHCPREQUEST  -  Client message to servers either (a) requesting
+                   offered parameters from one server and implicitly
+                   declining offers from all others, (b) confirming
+                   correctness of previously allocated address after,
+                   e.g., system reboot, or (c) extending the lease on a
+                   particular network address.
+
+   DHCPACK      -  Server to client with configuration parameters,
+                   including committed network address.
+
+   DHCPNAK      -  Server to client indicating client's notion of network
+                   address is incorrect (e.g., client has moved to new
+                   subnet) or client's lease as expired
+
+   DHCPDECLINE  -  Client to server indicating network address is already
+                   in use.
+
+   DHCPRELEASE  -  Client to server relinquishing network address and
+                   cancelling remaining lease.
+
+   DHCPINFORM   -  Client to server, asking only for local configuration
+                   parameters; client already has externally configured
+                   network address.
+				   
+
+State
+
+dhcpv4
+dhcpv6
+
+
+dhcp with multiple interfaces
