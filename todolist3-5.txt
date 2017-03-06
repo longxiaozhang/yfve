@@ -1,4 +1,4 @@
-todo list
+﻿todo list
 早上5:00 
 友邻优课英语
 完成第一遍笔记，用github做记录
@@ -6,9 +6,16 @@ todo list
 
 7:00-8:30 
 地铁看数学、背单词二十个
+dull entice diehard supporter skew cock rooster 40-odd prospect proposition punch-up downshift 
 
 上午 完成 web代码调试
+解决两个问题defect
+1、jason使用
+2、
+
 研究nginx和cgi通信实现，整理文档到github
+1、configer配置module
+2、main in nginx.c        
 
 中午默写单词
 午休
@@ -27,3 +34,4 @@ todo list
 复盘 计划
 
 
+50分
