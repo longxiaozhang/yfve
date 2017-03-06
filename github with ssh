@@ -1,0 +1,32 @@
+在github上使用ssh的优势
+Using the SSH protocol, you can connect and authenticate to remote servers and services. With SSH keys, you can connect to GitHub without supplying your username or password at each visit.
+
+确认本机上是否有ssh
+ls -al ~/.ssh
+如果有，执行上述命令会看到如下文件
+id_dsa.pub
+id_ecdsa.pub
+id_ed25519.pub
+id_rsa.pub
+
+如果没有则需要生成publickey,执行下述命令
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+改变key密码
+ssh-keygen -p
+
+
+将生成的key添加到ssh-agent
+以下命令查看ssh-agent是否在运行
+eval $(ssh-agent -s)
+如果没有在运行手动起ssh-agent（建议将ssh-agent添加到自动启动项中）
+如果在运行了执行ssh-add ~/.ssh/id_rsa添加key
+
+将public key添加到 github中
+xclip -sel clip < ~/.ssh/id_rsa.pub
+参考：https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/
+
+
+
+link：https://help.github.com/articles/checking-for-existing-ssh-keys/#platform-linux
+
+github使用手册：https://help.github.com/categories/authenticating-to-github/
