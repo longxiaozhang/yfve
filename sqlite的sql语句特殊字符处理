@@ -1,0 +1,10 @@
+keyWord = keyWord.replace("/", "//");  
+keyWord = keyWord.replace("'", "''");  
+keyWord = keyWord.replace("[", "/[");  
+keyWord = keyWord.replace("]", "/]");  
+keyWord = keyWord.replace("%", "/%");  
+keyWord = keyWord.replace("&","/&");  
+keyWord = keyWord.replace("_", "/_");  
+keyWord = keyWord.replace("(", "/(");  
+keyWord = keyWord.replace(")", "/)");  
+
